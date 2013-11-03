@@ -1,0 +1,45 @@
+## Vold 2.0 Generic fstab
+## - San Mehat (san@android.com)
+##
+
+#######################
+## Regular device mount
+##
+## Format: dev_mount <label> <mount_point> <part> <sysfs_path1...>
+## label        - Label for the volume
+## mount_point  - Where the volume will be mounted
+## part         - Partition # (1 based), or 'auto' for first usable partition.
+## <sysfs_path> - List of sysfs paths to source devices
+######################
+
+
+#######################
+## UMS path
+##
+## ums_path - default UMS path
+## ums_subpath1 - UMS path when external SD card is not inserted
+## ums_subpath2 - UMS path when external SD card is inserted.
+## ums_subpath3 - reserved
+######################
+
+# internal sdcard
+{
+  ums_path = /sys/devices/lm-2/gadget/lun0/file
+  ums_subpath1 = /sys/devices/lm-2/gadget/lun0/file
+  ums_subpath2 = /sys/devices/lm-2/gadget/lun0/file
+  asec = disable
+  discard = disable
+}
+dev_mount sdcard /mnt/sdcard 11 /devices/platform/bcm_sdhc.2/mmc_host/mmc1
+
+# externel sdcard
+{
+  ums_path = /sys/devices/lm-2/gadget/lun1/file
+  ums_subpath1 = /sys/devices/lm-2/gadget/lun1/file
+  ums_subpath2 = /sys/devices/lm-2/gadget/lun1/file
+  asec = enable
+}
+dev_mount sdcard1 /mnt/sdcard/external_sd auto /devices/platform/bcm_sdhc.3/mmc_host/mmc2
+
+#dev_mount sdcard /mnt/sdcard auto /devices/platform/bcm_sdhc.3/mmc_host/mmc2
+

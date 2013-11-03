@@ -1,0 +1,13 @@
+/system/csc/XSE/system/csc/contents.db
+/system/csc/XSE/system/csc/others.xml
+/system/csc/XSE/system/csc/sales_code.dat
+/system/csc/XSE/system/csc/customer.xml
+/system/csc/XSE/system/app/ZingBrowser-release_20110615170352.apk
+/system/csc/XSE/system/app/m.globe-v2.03.apk
+/system/csc/XSE/system/app/ZingNews-release.apk
+/system/csc/XSE/system/app/SmartNet_1_0_1476.apk
+/system/csc/XSE/system/media/audio/ringtones/NETPHONERINGTONE.mp3
+/system/csc/XSE/system/media/audio/ringtones/Globeringtone.mp3
+/system/csc/XSE/system/media/audio/notifications/NETPHONEMESSAGEALERT.mp3
+/system/csc/XSE/system/CSCFiles.txt
+/system/csc/XSE/system/CSCVersion.txt
